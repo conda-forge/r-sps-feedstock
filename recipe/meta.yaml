@@ -1,4 +1,4 @@
-{% set version = '0.5.3' %}
+{% set version = "0.5.4" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,10 +10,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/sps_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/sps/sps_{{ version }}.tar.gz
-  sha256: 2a0862338f2326128ab21ded3c590730c29758916c2b61984eafaabb97f486a4
+  sha256: 1fd06ecc79112c49a4b9a07802dc4ccf3fa3a5f007b5c47bb7ba798d40222f67
 
 build:
-  merge_build_host: True  # [win]
+  merge_build_host: true  # [win]
   number: 0
   noarch: generic
   rpaths:
@@ -37,13 +37,8 @@ test:
 about:
   home: https://marberts.github.io/sps/, https://github.com/marberts/sps
   license: MIT
-  summary: "Sequential Poisson sampling is a variation of Poisson sampling for drawing probability-proportional-to-size
-    samples with a given number of units, and is commonly used for price-index surveys.
-    This package gives functions to draw stratified sequential Poisson samples according
-    to the method by Ohlsson (1998, ISSN:0282-423X), as well as other order sample designs
-    by Rosen (1997, <doi:10.1016/S0378-3758(96)00186-3>), and generate appropriate
-    bootstrap replicate weights according to the generalized bootstrap method by Beaumont
-    and Patak (2012, <doi:10.1111/j.1751-5823.2011.00166.x>)."
+  summary: "Sequential Poisson sampling is a variation of Poisson sampling for drawing probability-proportional-to-size samples with a given number of units, and is commonly used for price-index surveys. This package gives functions to draw stratified sequential Poisson samples according to the method by Ohlsson (1998, ISSN:0282-423X),
+    as well as other order sample designs by Rosen (1997, <doi:10.1016/S0378-3758(96)00186-3>), and generate appropriate bootstrap replicate weights according to the generalized bootstrap method by Beaumont and Patak (2012, <doi:10.1111/j.1751-5823.2011.00166.x>)."
   license_family: MIT
   license_file:
     - '{{ environ["PREFIX"] }}/lib/R/share/licenses/MIT'
