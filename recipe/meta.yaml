@@ -1,6 +1,5 @@
 {% set version = "0.5.4" %}
 {% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: r-sps
@@ -13,8 +12,7 @@ source:
   sha256: 1fd06ecc79112c49a4b9a07802dc4ccf3fa3a5f007b5c47bb7ba798d40222f67
 
 build:
-  merge_build_host: true  # [win]
-  number: 0
+  number: 1
   noarch: generic
   rpaths:
     - lib/R/lib/
