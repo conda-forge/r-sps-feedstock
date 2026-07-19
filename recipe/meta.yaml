@@ -1,4 +1,4 @@
-{% set version = "0.6.3" %}
+{% set version = "0.6.4" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/sps_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/sps/sps_{{ version }}.tar.gz
-  sha256: fdd3edeab4765d8aecb754472a484cee1731f8e90bc8275031a08ecdc7573f18
+  sha256: e619b275d76fc5a6d2d86a17f7f6d899fcd0df1c018cb3a850aa76544a5b21b5
 
 build:
   number: 0
