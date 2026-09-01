@@ -1,4 +1,4 @@
-{% set version = "0.6.4" %}
+{% set version = "0.7.0" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/sps_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/sps/sps_{{ version }}.tar.gz
-  sha256: e619b275d76fc5a6d2d86a17f7f6d899fcd0df1c018cb3a850aa76544a5b21b5
+  sha256: f7c5e02d778f1ca3b2b4a180e3736b2c7f32c9a199dabfd4238556a88acb14e1
 
 build:
-  number: 0
+  number: 1
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -33,14 +33,13 @@ test:
     - "\"%R%\" -e \"library('sps')\""  # [win]
 
 about:
-  home: https://marberts.github.io/sps/, https://github.com/marberts/sps
-  license: MIT
+  home: https://codeberg.org/marberts/sps
+  license: GPL-3.0-or-later
   summary: "Sequential Poisson sampling is a variation of Poisson sampling for drawing probability-proportional-to-size samples with a given number of units, and is commonly used for price-index surveys. This package gives functions to draw stratified sequential Poisson samples according to the method by Ohlsson (1998, ISSN:0282-423X),
     as well as other order sample designs by Rosen (1997, <doi:10.1016/S0378-3758(96)00186-3>), and generate appropriate bootstrap replicate weights according to the generalized bootstrap method by Beaumont and Patak (2012, <doi:10.1111/j.1751-5823.2011.00166.x>)."
-  license_family: MIT
+  license_family: GPL3
   license_file:
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/MIT'
-    - LICENSE
+    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
 
 extra:
   recipe-maintainers:
